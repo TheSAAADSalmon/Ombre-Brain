@@ -86,9 +86,9 @@ def load_config(config_path: str = None) -> dict:
     if env_api_key:
         config.setdefault("dehydration", {})["api_key"] = env_api_key
 
-env_embedding_api_key = os.environ.get("OMBRE_EMBEDDING_API_KEY", "")
-if env_embedding_api_key:
-    config.setdefault("embedding", {})["api_key"] = env_embedding_api_key
+    env_embedding_api_key = os.environ.get("OMBRE_EMBEDDING_API_KEY", "")
+    if env_embedding_api_key:
+        config.setdefault("embedding", {})["api_key"] = env_embedding_api_key
 
     env_base_url = os.environ.get("OMBRE_BASE_URL", "")
     if env_base_url:
